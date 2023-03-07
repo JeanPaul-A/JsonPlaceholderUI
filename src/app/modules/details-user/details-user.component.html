@@ -1,0 +1,68 @@
+<div class="container">
+    <a routerLink="/users">
+        <mat-icon color="primary"> arrow_back_ios </mat-icon>
+    </a>
+    <mat-grid-list [cols]="colList" rowHeight="4:1">
+        <mat-grid-tile [colspan]="colsTile">
+            <mat-list>
+                <mat-list-item>
+                    <span>
+                        <mat-icon> person </mat-icon>
+                        {{user.username}} | {{user.name}}
+                    </span>
+                </mat-list-item>
+
+            </mat-list>
+
+        </mat-grid-tile>
+        <mat-grid-tile [rowspan]="rowTile">
+            <mat-list>
+                <mat-list-item>
+                    <span> Contact </span>
+                </mat-list-item>
+                <mat-list-item> <mat-icon> email </mat-icon> | {{user.email}}
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item> <mat-icon> phone </mat-icon> | {{user.phone}}
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item>
+                    <mat-icon> home </mat-icon> |
+                    {{user.address.street}} - {{user.address.suite}} -
+                    {{user.address.city}}
+                </mat-list-item>
+            </mat-list>
+        </mat-grid-tile>
+        <mat-grid-tile [rowspan]="rowTile">
+            <mat-list>
+                <mat-list-item>
+                    <span> Company </span>
+                </mat-list-item>
+                <mat-list-item>
+                    <span>
+                        <mat-icon> language </mat-icon> | {{user.website}}
+                    </span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item> <mat-icon> business </mat-icon> |
+                    {{user.company.name}}
+                </mat-list-item>
+            </mat-list>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="colsTile">
+            <button mat-flat-button color="primary"
+                (click)="routerAlbums(user.id)"
+                [routerLink]="['/albums']">
+                See Albums
+            </button>
+            <button mat-flat-button color="primary" [routerLink]="['/posts']"
+                (click)="routerPosts(user.id)">
+                See Posts
+            </button>
+            <button mat-flat-button color="primary" [routerLink]="['/toDos']"
+                (click)="routerTodos(user.id)">
+                See ToDos
+            </button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

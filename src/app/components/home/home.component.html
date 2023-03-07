@@ -1,0 +1,56 @@
+<mat-grid-list cols="2" rowHeight="3:1">
+    <mat-grid-tile>
+        <div class="descriptionDiv">
+            <span>
+                This project is a frontend that use&nbsp;
+                <a href="https://jsonplaceholder.typicode.com/">
+                    JSONPlaceholder
+                </a>
+                &nbsp;as backend
+            </span>
+            <span>
+                It was made to show abilities in frontend development using
+                Angular
+            </span>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="autorDiv">
+            <h2>Autor</h2>
+            <span>
+                Jean Paul Andres Cortez Rivera
+            </span>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="structureDiv">
+            <h2>Backend Structure:</h2>
+            <div>
+                ->Users
+                <div>
+                    ->Albums
+                    <div>
+                        ->Photos
+                    </div>
+                </div>
+                <div>
+                    ->Posts
+                    <div>
+                        ->Comments
+                    </div>
+                </div>
+                <div>
+                    ->ToDos
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="startDiv">
+            <h3> To start is necessary go to the users view </h3>
+            <button mat-flat-button color="primary" routerLink="/users">
+                Users
+            </button>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

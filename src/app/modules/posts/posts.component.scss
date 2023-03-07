@@ -1,0 +1,46 @@
+div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    :first-child {
+        padding-left: 1rem;
+    }
+}
+
+mat-grid-list {
+    margin: 2rem;
+
+    app-post {
+        width: 100%;
+        height: 100%;
+    }
+
+    mat-card {
+        width: 100%;
+        height: 100%;
+        padding-top: 1rem;
+        display: flex;
+
+        mat-card-header {
+            width: 50%;
+            height: 15%;
+            background-color: #673ab7;
+            border-radius: 1rem 1rem 0 0;
+            color: white;
+        }
+
+        mat-card-content {
+            height: 75%;
+            background-color: whitesmoke;
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        mat-card-footer {
+            background-color: gainsboro;
+            border-radius: 0 0 1rem 1rem;
+        }
+    }
+}

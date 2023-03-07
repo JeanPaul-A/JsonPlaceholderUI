@@ -1,0 +1,25 @@
+<div>
+    <a routerLink="/details">
+        <mat-icon color="primary"> arrow_back_ios </mat-icon>
+    </a>
+    <h2>
+        ToDos
+    </h2>
+</div>
+<mat-grid-list cols="5" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let toDo of toDos$ | async">
+        <mat-card>
+            <mat-card-header>
+                ToDo #{{toDo.id}}
+            </mat-card-header>
+            <mat-card-content>
+                {{toDo.title}}
+            </mat-card-content>
+            <mat-card-footer>
+                <div [className]="statusCompleted(toDo.completed)">
+                    {{toDo.completed ? "Completed" : "In Progress"}}
+                </div>
+            </mat-card-footer>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,25 @@
+div {
+    margin: 2rem;
+
+    h1 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    mat-grid-list {
+        mat-grid-tile {
+            mat-list {
+                background-color: whitesmoke;
+                width: 85%;
+                text-align: center;
+                margin: 2rem;
+
+                mat-list-item {
+                    .content {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}

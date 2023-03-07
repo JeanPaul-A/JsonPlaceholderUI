@@ -1,0 +1,27 @@
+<div class="container">
+    <mat-grid-list [cols]="cols" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let user of users$ | async">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <mat-card-title>
+                            {{user.username}}
+                        </mat-card-title>
+                        <mat-card-subtitle>
+                            {{user.name}}
+                        </mat-card-subtitle>
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>
+                    <p> {{user.email}} </p>
+                </mat-card-content>
+                <div class="spacer"></div>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary"
+                        (click)="onSubmit(user.id)" [routerLink]="['/details']">
+                        View Information </button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

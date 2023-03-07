@@ -1,0 +1,55 @@
+div {
+    padding: 1rem;
+
+    h2 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+mat-grid-list {
+    margin: 1rem;
+    width: 95vw;
+    mat-grid-tile {
+        text-align: center;
+        mat-card {
+            width: 90%;
+            height: 95%;
+
+            mat-card-header {
+                font-size: large;
+                font-weight: bold;
+            }
+
+            mat-card-content {
+                text-align: center;
+            }
+
+            mat-card-content::first-letter {
+                text-transform: uppercase;
+            }
+
+            mat-card-footer {
+                display: grid;
+                height: 100%;
+                justify-content: center;
+
+                div {
+                    color: white;
+                    align-self: flex-end;
+                    padding: 5px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+.completedTrue {
+    background-color: green;
+}
+
+.completedFalse {
+    background-color: red;
+}

@@ -1,0 +1,30 @@
+mat-card {
+    padding-top: 1rem;
+    display: flex;
+
+    mat-card-header {
+        width: 50%;
+        height: 15%;
+        background-color: #673ab7;
+        border-radius: 1rem 1rem 0 0;
+        font-size: large;
+        color: white;
+    }
+
+    mat-card-content {
+        height: 75%;
+        background-color: whitesmoke;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    mat-card-footer {
+        background-color: gainsboro;
+        border-radius: 0 0 1rem 1rem;
+
+        .divComments {
+            margin-bottom: 1rem;
+        }
+    }
+}

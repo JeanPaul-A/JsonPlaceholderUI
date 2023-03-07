@@ -1,0 +1,26 @@
+<div>
+    <a routerLink="/details">
+        <mat-icon color="primary"> arrow_back_ios </mat-icon>
+    </a>
+    <h1> Albums </h1>
+    <mat-grid-list cols="6">
+        <mat-grid-tile *ngFor="let album of albums$ | async">
+            <mat-list>
+                <mat-list-item>
+                    <mat-icon> photo_album </mat-icon>
+                </mat-list-item>
+                <mat-list-item>
+                    {{album.title}}
+                    {{album.id}}
+                </mat-list-item>
+                <mat-list-item>
+                    <button mat-flat-button color="primary"
+                        [routerLink]="['/photos']"
+                        (click)="routerPhotos(album.id)">
+                        See Photos
+                    </button>
+                </mat-list-item>
+            </mat-list>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

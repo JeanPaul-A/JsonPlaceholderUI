@@ -1,0 +1,23 @@
+<div>
+    <div>
+        <a routerLink="/details">
+            <mat-icon color="primary"> arrow_back_ios </mat-icon>
+        </a>
+    </div>
+    <div>
+        <mat-paginator #paginator
+            [length]="paginatorLength"
+            [pageSize]="1"
+            [hidePageSize]="true"
+            [showFirstLastButtons]="true"
+            (page)="paginatorEvent($event)">
+        </mat-paginator>
+    </div>
+</div>
+<mat-grid-list cols="1">
+    <mat-grid-tile>
+        <app-post [posts$]="posts$" [postId]="postId">
+        </app-post>
+    </mat-grid-tile>
+
+</mat-grid-list>
